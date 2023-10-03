@@ -1,9 +1,10 @@
 {
     "name": "dlunamontilla/dlunire",
-    "description": "DLUnire es la combinación perfecta de \"Uni\", que representa unidades individuales, y \"Re\", que significa recursos interconectados. Este nombre encapsula la esencia de nuestro enfoque: construir soluciones a partir de unidades modulares que se unen como piezas de un rompecabezas. En lugar de enfrentarte a sistemas monolíticos, DLUnire te permite ensamblar tus aplicaciones a medida que reúnes componentes modulares para crear soluciones poderosas y versátiles.",
+    "description": "DLUnire cuenta con un motor de plantillas, modelos, controladores y un sistema de rutas. Además, cuenta con analizador sintáctico para leer archivos `.env.type` como variables de entorno con tipos estáticos.",
     "type": "project",
     "license": "MIT",
     "homepage": "https://dlunire.pro/",
+    "version": "v0.0.4",
     "autoload": {
         "psr-4": {
             "DLUnire\\": "app/",

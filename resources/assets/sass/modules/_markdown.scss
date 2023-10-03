@@ -15,6 +15,15 @@
         line-height: 1.6;
         margin-bottom: 20px;
     }
+
+    strong {
+        color: lighten(yellow, 40);
+        background-color: rgba(yellow, 0.03);
+        display: inline-blok;
+        border-radius: 4px;
+        padding: 2px 3px;
+
+    }
 }
 
 pre {
@@ -31,6 +40,11 @@ pre[class*=language-] {
     box-shadow: 2px 2px 0 2px rgba(white, 0.05);
 
     background-color: rgba(black, 0.2);
+
+    code {
+        background-color: transparent;
+        border: 0;
+    }
 }
 
 blockquote {
@@ -45,4 +59,13 @@ blockquote {
 
     margin-bottom: 30px;
     border: 1px solid rgba(white, 0.1);
+}
+
+code {
+    background-color: rgba(black, 0.4);
+    padding: 1px 7px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(white,0.1);
 }

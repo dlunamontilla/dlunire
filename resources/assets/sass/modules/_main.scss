@@ -64,7 +64,7 @@ label {
         align-items: center;
 
         font: {
-            size: 1.2rem;
+            size: 1.1rem;
             color: $base-color;
         }
 
@@ -73,6 +73,10 @@ label {
             position: relative;
             max-width: 70px;
             margin-right: 10px;
+        }
+
+        @media screen and (max-width: 800px) {
+            font-size: 1rem;
         }
     }
 }
