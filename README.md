@@ -23,6 +23,10 @@ Raíz /
 
 ## Instalación
 
+Antes de comenzar, instalen la extensión `DL Typed Environment` para su editor **VSCode**, ya que esta herramienta utiliza variables de entorno con tipos estáticos.
+
+Para establecer las credenciales, debe copiar el archivo `.env.type.example` a `.env.type`.
+
 Para crear una aplicación con esta herramienta, debe escribir el siguiente comando:
 
 ```bash
