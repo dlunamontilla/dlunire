@@ -1,0 +1,29 @@
+:root {
+    background-color: $background;
+    color: silver;
+
+    font: {
+        size: 14px;
+        family: "Open Sans", sans-serif, arial;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid rgba(white, 0.1);
+    margin: 30px auto;
+}

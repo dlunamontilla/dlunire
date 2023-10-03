@@ -1,0 +1,21 @@
+@section('form')
+    form
+@endsection
+
+<div class="container">
+    <div class="form-container">
+
+        <form action="/google/test" class="form" method="post" id="{{ trim($form )}}">
+            @csrf
+
+            <label for="test">
+                <span>Test:</span>
+                <input type="text" name="test" id="test" required placeholder="Realizar una prueba">
+            </label>
+
+            @includes('layouts.google.recaptcha')
+        </form>
+    </div>
+</div>
+
+@includes("layouts.google.google-script")

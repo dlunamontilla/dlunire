@@ -1,0 +1,51 @@
+{
+    "status": false,
+    "error": "Class \"Framework\\Config\\Controller\" not found",
+    "details": {
+        "filename": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/app/Controllers/TestController.php",
+        "line": 7
+    },
+    "trace": [
+        {
+            "file": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/vendor/composer/ClassLoader.php",
+            "line": 576,
+            "function": "include"
+        },
+        {
+            "file": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/vendor/composer/ClassLoader.php",
+            "line": 427,
+            "function": "Composer\\Autoload\\{closure}"
+        },
+        {
+            "function": "loadClass",
+            "class": "Composer\\Autoload\\ClassLoader",
+            "type": "->"
+        },
+        {
+            "file": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/vendor/dlunamontilla/dlroute/app/Requests/Route.php",
+            "line": 101,
+            "function": "is_callable"
+        },
+        {
+            "file": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/vendor/dlunamontilla/dlroute/app/Requests/DLRoute.php",
+            "line": 141,
+            "function": "run",
+            "class": "DLRoute\\Requests\\Route",
+            "type": "::"
+        },
+        {
+            "file": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/boot/Project.php",
+            "line": 77,
+            "function": "execute",
+            "class": "DLRoute\\Requests\\DLRoute",
+            "type": "::"
+        },
+        {
+            "file": "/home/david/aplicaciones/My Projects/Frameworks/DLUnire/public/index.php",
+            "line": 11,
+            "function": "run",
+            "class": "Boot\\Project",
+            "type": "::"
+        }
+    ]
+}

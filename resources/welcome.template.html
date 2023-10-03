@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+
+<head>
+    @includes("layouts.headers.header")
+</head>
+
+<body>
+    <main>
+        @includes('layouts.headers.header-template')
+
+        <!-- @includes('layouts.google.form-example') -->
+
+        <div class="markdown">
+            @markdown('markdown.readme')
+        </div>
+
+        <footer class="footer">
+
+            <div class="footer__inner">
+                David E Luna M &lt;contact@dlunire.pro&gt;
+            </div>
+        </footer>
+    </main>
+
+
+    {{ js('/resources/assets/js/prism.js', ["external" => false, "token" => $token, "behavior_attributes" => "data-manual"]) }}
+
+    <script nonce="{{ $token }}">
+        Prism.highlightAll();
+
+        window.Prism = window.Prism || {};
+        window.Prism.manual = true;
+    </script>
+</body>
+
+</html>

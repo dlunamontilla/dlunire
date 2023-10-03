@@ -1,0 +1,21 @@
+.footer {
+
+    background-color: rgba(darken($base-color, 35), 0.9);
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    margin: auto;
+    left: 0; right: 0;
+    top: auto; bottom: 0;
+    border-top: 1px solid rgba(white, 0.1);
+
+    &__inner {
+        max-width: $max-width;
+        margin: 0 auto;
+
+    }
+}

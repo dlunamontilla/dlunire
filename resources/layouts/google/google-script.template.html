@@ -1,0 +1,54 @@
+<script src='https://www.google.com/recaptcha/api.js' nonce="{{ $token }}"></script>
+
+<script nonce="{{ $token }}">
+    function onSubmit(token) {
+
+        /**
+         * Formulario al que se le aplicará el sistema reaptcha
+         *
+         * @type { HTMLFormElement | null }
+         */
+        const form = document.getElementById("{{ trim($form) ?? 'login-form' }}");
+
+
+        if (!(form instanceof HTMLFormElement)) {
+            return;
+        }
+
+        const inputs = form.getElementsByTagName('input');
+
+        for (const input of inputs) {
+            const { required, id } = input;
+            const minlength = input.getAttribute('minlength');
+            const lengthValue = input.value.trim().length;
+
+            /**
+             * Cajas de mensajes
+             *
+             * @type { HTMLElement | null }
+             */
+            const message = form.querySelector("#" + id + "-info");
+
+            if (required && minlength) {
+                const min = Number(minlength);
+
+                if (min > lengthValue) {
+                    if (message instanceof HTMLElement) {
+                        message.textContent = `Agregue, al menos, ${min} caracteres`.trim();
+                        message.classList.add('warning');
+
+                        setTimeout(function () {
+                            message.classList.remove('warning');
+                            message.textContent = "";
+                        }, 3000)
+                    }
+
+                    input.focus();
+                    return;
+                }
+            }
+        }
+
+        form.requestSubmit();
+    }
+</script>

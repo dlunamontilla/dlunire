@@ -1,0 +1,8 @@
+<!-- phpunit.xml -->
+<phpunit colors="true">
+    <testsuites>
+        <testsuite name="Primer test">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

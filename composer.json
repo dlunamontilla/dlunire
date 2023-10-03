@@ -1,0 +1,35 @@
+{
+    "name": "dlunamontilla/dlunire",
+    "description": "DLUnire es la combinación perfecta de \"Uni\", que representa unidades individuales, y \"Re\", que significa recursos interconectados. Este nombre encapsula la esencia de nuestro enfoque: construir soluciones a partir de unidades modulares que se unen como piezas de un rompecabezas. En lugar de enfrentarte a sistemas monolíticos, DLUnire te permite ensamblar tus aplicaciones a medida que reúnes componentes modulares para crear soluciones poderosas y versátiles.",
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://dlunire.pro/",
+    "autoload": {
+        "psr-4": {
+            "DLUnire\\": "app/",
+            "Framework\\": "dlunire/",
+            "Boot\\": "boot/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David E Luna M",
+            "email": "davidlunamontilla@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^10.3"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "require": {
+        "dompdf/dompdf": "^2.0",
+        "dlunamontilla/dltools": "^0.0.16"
+    },
+
+    "scripts": {
+        "dev": "php -S localhost:3000 -t public/"
+    }
+}

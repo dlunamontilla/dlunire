@@ -1,0 +1,9 @@
+// Color fondo de base:
+$base-color: #0080d4;
+
+$background: darken($base-color, 35);
+$color: silver;
+
+// Anchuras:
+$width: calc(100% - 30px);
+$max-width: 1200px;

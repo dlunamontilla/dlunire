@@ -1,0 +1,24 @@
+# Bibliotecas
+vendor
+node_modules
+
+# Base de datos
+*.sql
+
+# Variables de entorno.
+.env
+.type
+.env.type
+
+# Excepciones
+!.env.example
+!.env.type.example
+!.type.example
+
+# Logs del sistema
+log
+*.log*
+.log*
+
+# Caches
+cache
