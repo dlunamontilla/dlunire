@@ -4,6 +4,12 @@
 
 > **Importante:** la documentación aún no se ha terminado. En la medida de lo posible, iré actualizando la documentación de cómo funciona esta herramienta.
 > De hecho, cuenta con un motor de plantillas similar a Laravel y cuenta con directivas.
+>
+> Puede [obtener el Framework aqui](https://github.com/dlunamontilla/dlunire "Framework DLUnire") o escribiendo el siguiente comando:
+>
+> ```bash
+> composer create-project dlunamontilla/dlunire tu-app
+> ```
 
 ### Directorios | Estructura
 
@@ -268,6 +274,8 @@ $rows = 100;
 
 $users = Users::paginate($page, $rows);
 ```
+
+---
 
 ### Continuará
 

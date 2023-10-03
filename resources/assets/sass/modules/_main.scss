@@ -37,8 +37,16 @@ label {
 }
 
 .header {
-    background-color: rgba(black, 0.2);
+    background-color: rgba(darken($base-color, 37), 0.8);
     margin-bottom: 40px;
+    border-bottom: 1px solid rgba(white, 0.1);
+
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
 }
 
 .navigation {
@@ -56,7 +64,7 @@ label {
         align-items: center;
 
         font: {
-            size: 1.6rem;
+            size: 1.2rem;
             color: $base-color;
         }
 
@@ -64,10 +72,12 @@ label {
             display: flex;
             position: relative;
             max-width: 70px;
+            margin-right: 10px;
         }
     }
 }
 
 main {
     padding-bottom: 100px;
+    padding-top: 100px;
 }

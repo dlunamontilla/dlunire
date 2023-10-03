@@ -152,6 +152,10 @@ hr {
   margin: 30px auto;
 }
 
+a {
+  color: #ffff66;
+}
+
 .form-container {
   margin: 20px auto;
   max-width: 800px;
@@ -186,8 +190,15 @@ label span {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 14, 23, 0.8);
   margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: auto;
 }
 
 .navigation {
@@ -200,17 +211,19 @@ label span {
 .navigation__logo {
   display: flex;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-color: #0080d4;
 }
 .navigation__logo img {
   display: flex;
   position: relative;
   max-width: 70px;
+  margin-right: 10px;
 }
 
 main {
   padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 .markdown {

@@ -1,2 +1,2 @@
 <?php
-define('DL_COMPANY_NAME', 'DLUnire');
+define('DL_COMPANY_NAME', 'Framework DLUnire');

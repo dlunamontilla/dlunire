@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="97.072899mm"
+   height="97.072899mm"
+   viewBox="0 0 97.072899 97.072899"
+   version="1.1"
+   id="svg12"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="/home/david/Imágenes/Vectores/DLUnire/DLUnire.png"
+   inkscape:export-xdpi="141.11"
+   inkscape:export-ydpi="141.11"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.51847643"
+     inkscape:cx="54.004383"
+     inkscape:cy="343.31358"
+     inkscape:window-width="1600"
+     inkscape:window-height="793"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs9" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-21.071554,-73.04653)">
+    <rect
+       style="fill:#0070ff;fill-opacity:1;stroke:none;stroke-width:2.965;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect206057"
+       width="96.607903"
+       height="96.607903"
+       x="-117.91196"
+       y="-169.88693"
+       ry="48.303951"
+       transform="scale(-1)" />
+    <path
+       id="rect7079"
+       style="fill:#daebff;fill-opacity:1;stroke:none;stroke-width:2.69999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 95.922463,147.9062 V 124.28595 H 72.302717 v 23.62025 z m -28.911413,0 V 124.28595 H 43.391302 V 147.9062 Z M 95.922463,118.99428 V 95.374505 H 72.302717 v 23.619775 z" />
+  </g>
+</svg>
