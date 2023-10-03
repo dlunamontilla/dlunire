@@ -16,7 +16,7 @@ node_modules
 !.type.example
 
 # Logs del sistema
-log
+logs
 *.log*
 .log*
 
