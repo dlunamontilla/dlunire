@@ -1,12 +1,37 @@
-# Mini Framework DLUnire | Todavía en fase Alpha
+# Bienvenido a este Mini Framework PHP
+
+---
 
 > **Importante:** la documentación aún no se ha terminado. En la medida de lo posible, iré actualizando la documentación de cómo funciona esta herramienta.
 > De hecho, cuenta con un motor de plantillas similar a Laravel y cuenta con directivas.
+>
+> Puede [obtener el Framework aqui](https://github.com/dlunamontilla/dlunire "Framework DLUnire") o escribiendo el siguiente comando en la terminal:
+>
+> ```bash
+> composer create-project dlunamontilla/dlunire tu-app
+> ```
+>
+> Antes de usar esta herramienta, debes instalar una extensión para **Visual Studio Code** para obtener el resaltador de sintaxis de las variables de entorno con tipos estáticos.
+> El nombre del archivo para variables de entorno que debe crear es `.env.type`.
+>
+> ## Instalación del resaltador de sintaxis de las Variables de Entorno
+>
+> Vaya al instalador de extensiones de **Visual Studio Code** y busque `DL Typed Environment` y si no aparece, [visite este enlace para descargar la extensión](https://marketplace.visualstudio.com/items?itemName=dlunamontilla.envtype "Resaltador de sintaxis").
+>
+> ### Instalación de SASS
+>
+> Para escribir código `SCSS` debe instalar SASS escribiendo el siguiente comando:
+>
+> ```bash
+> npm -g install sass
+> ```
 
 ## Directorios | Estructura
 
 ```none
-Raíz /   
+Raíz /
+    |- /public/ → Directorio de ejecución de la aplicación. Ten en cuenta que es el directorio donde corre el proyecto.
+
     |- /app
         |- /Models → Directorio para crear modelos.
         |- /Auth → Para definir el sistema de autenticación.
@@ -23,10 +48,6 @@ Raíz /
 
 ## Instalación
 
-Antes de comenzar, instalen la extensión `DL Typed Environment` para su editor **VSCode**, ya que esta herramienta utiliza variables de entorno con tipos estáticos.
-
-Para establecer las credenciales, debe copiar el archivo `.env.type.example` a `.env.type`.
-
 Para crear una aplicación con esta herramienta, debe escribir el siguiente comando:
 
 ```bash
@@ -38,6 +59,28 @@ Y luego, del paso anterior, solo tienes que correrla:
 ```bash
 composer run dev
 ```
+
+## Directorio de ejecución de la aplicación
+
+El directorio de ejecutución de la aplicación es `public/`, pero puedes cambiar su nombre si así lo desea, pero asegúrate que siempre apunte al directorio que hayas utilizado como directorio de ejecución de la aplicación.
+
+Si cambias el nombre, también debes cambiar:
+
+```json
+"scripts": {
+    "dev": "php -S localhost:3000 -t public/"
+}
+```
+
+Por esta:
+
+```json
+"scripts": {
+    "dev": "php -S localhost:3000 -t nuevo-directorio-de-ejecucion/"
+}
+```
+
+Sin embargo, siempre se recomienda dejarle el mismo nombre al directorio.
 
 ## Métodos HTTP soportados, por ahora
 
@@ -56,7 +99,7 @@ Aquí tenemos tres formas de definirnas
    ```php
    use DLRoute\Requests\DLRoute;
 
-   DLRoute::get('/', "DLRoute\\Controllers\\TestController@method");
+   DLRoute::get('/', "DLUnire\\Controllers\\TestController@method");
    ```
 
    De esa manera, se estará apuntando al controlador que se encuentra en la ruta `app/Controllers/TestController.php`, a la vez, que se ejecuta el método `method`.
@@ -270,6 +313,8 @@ $rows = 100;
 
 $users = Users::paginate($page, $rows);
 ```
+
+---
 
 ## Continuará
 

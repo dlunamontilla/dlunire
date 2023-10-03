@@ -99,7 +99,7 @@ Aquí tenemos tres formas de definirnas
    ```php
    use DLRoute\Requests\DLRoute;
 
-   DLRoute::get('/', "DLRoute\\Controllers\\TestController@method");
+   DLRoute::get('/', "DLUnire\\Controllers\\TestController@method");
    ```
 
    De esa manera, se estará apuntando al controlador que se encuentra en la ruta `app/Controllers/TestController.php`, a la vez, que se ejecuta el método `method`.
