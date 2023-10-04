@@ -48,7 +48,7 @@ final class TestController extends Controller {
         ];
     }
 
-    public function recaptcha(): array {
+    public function recaptcha() {
         validate_ref();
         
         /**
