@@ -166,9 +166,9 @@ Los parámetros definidos en `$param` son los que se han definido en una ruta si
 /ruta/{param1}/{param2}{paramN}
 
 # Estos parámetros se convierten a esto de forma automática:
-$param->param1
-$param->param2
-$param->paramN
+$param->param1;
+$param->param2;
+$param->paramN;
 ```
 
 ### Captura de valores desde el controlador
@@ -250,7 +250,7 @@ namespace DLUnire\Models;
 
 use DLTools\Database\Model;
 
-class Tabla extends Models {}
+final class Tabla extends Models {}
 ```
 
 No hace falta definir algo más, a menos que desee agregar funcionalidades personalizadas.
@@ -264,7 +264,7 @@ namespace DLUnire\Models;
 
 use DLTools\Database\Model;
 
-class Tabla extends Models {
+final class Tabla extends Models {
     protecte static ?string $table = "otra_tabla";
 }
 ```

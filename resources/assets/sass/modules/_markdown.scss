@@ -44,6 +44,7 @@ pre[class*=language-] {
     code {
         background-color: transparent;
         border: 0;
+        padding: 0;
     }
 }
 
@@ -63,9 +64,8 @@ blockquote {
 
 code {
     background-color: rgba(black, 0.4);
-    padding: 1px 7px;
+    padding: 2px 7px;
     border-radius: 4px;
-    display: inline-flex;
     align-items: center;
     border: 1px solid rgba(white,0.1);
 }
