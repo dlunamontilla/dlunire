@@ -27,7 +27,7 @@
     },
     "require": {
         "dompdf/dompdf": "^2.0",
-        "dlunamontilla/dltools": "^0.0.18"
+        "dlunamontilla/dltools": "^0.0.19"
     },
 
     "scripts": {

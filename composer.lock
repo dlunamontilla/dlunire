@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bbb72d6ac6589ec0affefda28bd4dac",
+    "content-hash": "69805d424103b7e3b3ab6b792ebd4458",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -120,16 +120,16 @@
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.0.18",
+            "version": "v0.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "07b11f4c24b3f0e9765c387d27d0ef6d98f7b8b0"
+                "reference": "8b5bedde73ce02b359909299ab5e3b15ecd658f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/07b11f4c24b3f0e9765c387d27d0ef6d98f7b8b0",
-                "reference": "07b11f4c24b3f0e9765c387d27d0ef6d98f7b8b0",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/8b5bedde73ce02b359909299ab5e3b15ecd658f9",
+                "reference": "8b5bedde73ce02b359909299ab5e3b15ecd658f9",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.18"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.19"
             },
-            "time": "2023-10-05T19:15:17+00:00"
+            "time": "2023-10-05T23:42:37+00:00"
         },
         {
             "name": "dompdf/dompdf",
@@ -657,16 +657,16 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.2.4",
+            "version": "v1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "c9ff517a53903b3d4e29ec547fb20feecb05b8ab"
+                "reference": "0462f0166e823aad657c9224d0f849ecac1ba10a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/c9ff517a53903b3d4e29ec547fb20feecb05b8ab",
-                "reference": "c9ff517a53903b3d4e29ec547fb20feecb05b8ab",
+                "url": "https://api.github.com/repos/nette/schema/zipball/0462f0166e823aad657c9224d0f849ecac1ba10a",
+                "reference": "0462f0166e823aad657c9224d0f849ecac1ba10a",
                 "shasum": ""
             },
             "require": {
@@ -713,9 +713,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.2.4"
+                "source": "https://github.com/nette/schema/tree/v1.2.5"
             },
-            "time": "2023-08-05T18:56:25+00:00"
+            "time": "2023-10-05T20:37:59+00:00"
         },
         {
             "name": "nette/utils",
