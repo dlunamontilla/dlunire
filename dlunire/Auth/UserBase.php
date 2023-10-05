@@ -46,11 +46,11 @@ abstract class UserBase extends DLUser {
     /**
      * Captura del cliente HTTP las credenciales del usuario
      *
-     * @return void
+     * @return bool
      * 
      * @throws Error
      */
-    public function capture_credentials(): void {
+    public function capture_credentials(): bool {
         
         /**
          * Autenticación del usuario
@@ -89,10 +89,17 @@ abstract class UserBase extends DLUser {
             $password
         );
 
-        $auth->auth($this, [
+        /**
+         * Indica si se ha loggeado el usuario
+         * 
+         * @var boolean $logged
+         */
+        $logged = $auth->auth($this, [
             "username_field" => static::$username_column ?? 'username',
             "password_field" => static::$password_column ?? 'password',
             "token_field" => static::$token_column ?? 'token'
         ]);
+
+        return $logged;
     }
 }

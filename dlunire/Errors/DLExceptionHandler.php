@@ -44,7 +44,7 @@ final class DLExceptionHandler {
          * 
          * @var Environment
          */
-        $environment = new Environment();
+        $environment = Environment::get_instance();
 
         return $environment->is_production_environment();
     }

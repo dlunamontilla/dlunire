@@ -4,7 +4,7 @@
     "type": "project",
     "license": "MIT",
     "homepage": "https://dlunire.pro/",
-    "version": "v0.0.12",
+    "version": "v0.0.13",
     "autoload": {
         "psr-4": {
             "DLUnire\\": "app/",
@@ -27,7 +27,7 @@
     },
     "require": {
         "dompdf/dompdf": "^2.0",
-        "dlunamontilla/dltools": "^0.0.16"
+        "dlunamontilla/dltools": "^0.0.18"
     },
 
     "scripts": {

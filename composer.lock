@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbaafeb3865596317ac5c68a87b43fbd",
+    "content-hash": "6bbb72d6ac6589ec0affefda28bd4dac",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -120,16 +120,16 @@
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.0.16",
+            "version": "v0.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "5baac5af8e28f287a9a3b8e91275217a09872fd9"
+                "reference": "07b11f4c24b3f0e9765c387d27d0ef6d98f7b8b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/5baac5af8e28f287a9a3b8e91275217a09872fd9",
-                "reference": "5baac5af8e28f287a9a3b8e91275217a09872fd9",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/07b11f4c24b3f0e9765c387d27d0ef6d98f7b8b0",
+                "reference": "07b11f4c24b3f0e9765c387d27d0ef6d98f7b8b0",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.16"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.18"
             },
-            "time": "2023-10-02T20:17:42+00:00"
+            "time": "2023-10-05T19:15:17+00:00"
         },
         {
             "name": "dompdf/dompdf",
@@ -1456,16 +1456,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "10.1.6",
+            "version": "10.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "56f33548fe522c8d82da7ff3824b42829d324364"
+                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/56f33548fe522c8d82da7ff3824b42829d324364",
-                "reference": "56f33548fe522c8d82da7ff3824b42829d324364",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/355324ca4980b8916c18b9db29f3ef484078f26e",
+                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e",
                 "shasum": ""
             },
             "require": {
@@ -1522,7 +1522,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.6"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.7"
             },
             "funding": [
                 {
@@ -1530,7 +1530,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-19T04:59:03+00:00"
+            "time": "2023-10-04T15:34:17+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
