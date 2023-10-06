@@ -71,6 +71,12 @@ class Project implements ProjectInterface {
     }
 
     public static function run(): void {
+        Authorizations::register_domain([
+            "localhost",
+        ]);
+
+        Authorizations::init();
+
         SystemCredentials::load();
         
         self::includes();
