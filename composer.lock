@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25c675fa13d194cc2ef5baea7acfd918",
+    "content-hash": "f2b68186246b75e22a08f7988364697e",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -120,16 +120,16 @@
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.0.19",
+            "version": "v0.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "8b5bedde73ce02b359909299ab5e3b15ecd658f9"
+                "reference": "853648aed0643f63e8a9feefcff3e5c948c3b3a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/8b5bedde73ce02b359909299ab5e3b15ecd658f9",
-                "reference": "8b5bedde73ce02b359909299ab5e3b15ecd658f9",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/853648aed0643f63e8a9feefcff3e5c948c3b3a0",
+                "reference": "853648aed0643f63e8a9feefcff3e5c948c3b3a0",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.19"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.20"
             },
-            "time": "2023-10-05T23:42:37+00:00"
+            "time": "2023-10-06T04:02:59+00:00"
         },
         {
             "name": "dompdf/dompdf",
@@ -1777,16 +1777,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.3.5",
+            "version": "10.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "747c3b2038f1139e3dcd9886a3f5a948648b7503"
+                "reference": "9784e877e3700de37475545bdbdce8383ff53d25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/747c3b2038f1139e3dcd9886a3f5a948648b7503",
-                "reference": "747c3b2038f1139e3dcd9886a3f5a948648b7503",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9784e877e3700de37475545bdbdce8383ff53d25",
+                "reference": "9784e877e3700de37475545bdbdce8383ff53d25",
                 "shasum": ""
             },
             "require": {
@@ -1826,7 +1826,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "10.3-dev"
+                    "dev-main": "10.4-dev"
                 }
             },
             "autoload": {
@@ -1858,7 +1858,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.3.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.4.0"
             },
             "funding": [
                 {
@@ -1874,7 +1874,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-19T05:42:37+00:00"
+            "time": "2023-10-06T03:41:22+00:00"
         },
         {
             "name": "sebastian/cli-parser",
