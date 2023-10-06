@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e5ff7ca7d4ea7f9b7e69344ddb9fbe7",
+    "content-hash": "1e23a9c3d38cb9601799a31e67fb8e86",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -120,16 +120,16 @@
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.0.20",
+            "version": "v0.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "853648aed0643f63e8a9feefcff3e5c948c3b3a0"
+                "reference": "1a1d868cd8c76810b129b6be93af2b3338ade253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/853648aed0643f63e8a9feefcff3e5c948c3b3a0",
-                "reference": "853648aed0643f63e8a9feefcff3e5c948c3b3a0",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/1a1d868cd8c76810b129b6be93af2b3338ade253",
+                "reference": "1a1d868cd8c76810b129b6be93af2b3338ade253",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.20"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.21"
             },
-            "time": "2023-10-06T04:02:59+00:00"
+            "time": "2023-10-06T21:49:56+00:00"
         },
         {
             "name": "dompdf/dompdf",
