@@ -27,7 +27,7 @@ class Authorizations implements AuthorizationsInterface {
         foreach (self::$domains as $domain) {
             $pattern = "/(http:\/{2}|https:\/{2}){$domain}(:[0-9]{2,4})?/i";
 
-            if (!preg_match($pattern, $origin)) {
+            if (preg_match($pattern, $origin)) {
                 self::allow_origin($origin);
                 break;
             }
