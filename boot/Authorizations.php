@@ -28,12 +28,11 @@ class Authorizations implements AuthorizationsInterface {
             $pattern = "/(http:\/{2}|https:\/{2}){$domain}(:[0-9]{2,4})?/i";
 
             if (!preg_match($pattern, $origin)) {
-                header("HTTP/1.1 403 Forbidden");
-                exit();
+                self::allow_origin($origin);
+                break;
             }
         }
 
-        self::allow_origin($origin);
     }
 
     /**
