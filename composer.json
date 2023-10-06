@@ -4,7 +4,6 @@
     "type": "project",
     "license": "MIT",
     "homepage": "https://dlunire.pro/",
-    "version": "v0.0.18",
     "autoload": {
         "psr-4": {
             "DLUnire\\": "app/",
