@@ -56,8 +56,14 @@ final class DLExceptionHandler {
      * @return void
      */
     public static function handle(Exception|Error $exception): void {
+        /**
+         * Devuelve el código de error
+         * 
+         * @var integer $code
+         */
+        $code = (int) $exception->getCode();
 
-        header("Content-Type: application/json; charset=utf-8", true, 500);
+        header("Content-Type: application/json; charset=utf-8", true, $code);
 
         /**
          * Mesaje de error genérico.
@@ -66,7 +72,7 @@ final class DLExceptionHandler {
          */
         $error_default = [
             "status" => false,
-            "error" => "Error 500"
+            "error" => "Error {$code}"
         ];
 
         /**
