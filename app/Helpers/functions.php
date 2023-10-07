@@ -1,5 +1,6 @@
 <?php
 
+use DLRoute\Requests\DLRequest;
 use DLRoute\Routes\RouteDebugger;
 use DLRoute\Server\DLServer;
 use DLTools\Compilers\DLView;
@@ -161,7 +162,7 @@ if (!function_exists('view_pdf')) {
          * 
          * @var string
          */
-        $view = view($view, $options ?? []);    
+        $view = view($view, $options ?? []);
 
         $pdf = new Dompdf();
 
@@ -223,8 +224,95 @@ if (!function_exists('redirect')) {
          */
         $url = "{$http_host}/{$uri}";
         $url = RouteDebugger::url_encode($url);
-        
+
         header("Location: {$url}", true, $code);
         exit;
+    }
+}
+
+if (!function_exists('is_valid_ref')) {
+
+    /**
+     * Verifica si la referencia de origen es válida
+     *
+     * @param string $field
+     * @return boolean
+     */
+    function is_valid_ref(string $field = "csrf-token"): bool {
+        /**
+         * Petición del cliente HTTP
+         * 
+         * @var DLRequest $request
+         */
+        $request = DLRequest::get_instance();
+
+        /**
+         * Valores de la petición
+         * 
+         * @var array $values
+         */
+        $values = $request->get_values();
+
+        /**
+         * Token enviado por el usuario
+         * 
+         * @var string|null
+         */
+        $csrf_token = $values[$field] ?? null;
+
+        /**
+         * Token de la sesión
+         * 
+         * @var string | null
+         */
+        $token = $_SESSION['csrf-token'] ?? null;
+
+        if (is_null($token)) {
+            return false;
+        }
+
+        return $csrf_token === $token;
+    }
+}
+
+if (!function_exists('regenerate_activation_code')) {
+
+    /**
+     * Regenera el código de validación
+     *
+     * @param string $activation_code Código de validación
+     * @return string
+     */
+    function regenerate_activation_code(string $activation_code): string {
+        /**
+         * Cantidad de dígitos del código de activación.
+         * 
+         * @var integer $quantity
+         */
+        $quantity = strlen($activation_code);
+
+        /**
+         * Relleno del código de validación
+         * 
+         * @var string $fill
+         */
+        $fill = implode("", array_fill(0, 13 - $quantity, 0));
+
+        $activation_code = "{$fill}{$activation_code}";
+
+        return trim($activation_code);
+    }
+}
+
+if (!function_exists('datetime')) {
+
+    /**
+     * Convierte fecha en forma UNIX a formato Fecha y Hora (datetime)
+     *
+     * @param integer $timestamp Fecha en forma UNIX
+     * @return string
+     */
+    function datetime(int $timestamp): string {
+        return date("Y-m-d H:i:s", $timestamp);
     }
 }
