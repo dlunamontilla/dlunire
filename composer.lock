@@ -120,16 +120,16 @@
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.0.22",
+            "version": "v0.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "2fef73b01baff579c75d4013a44c8fbfb6030f25"
+                "reference": "4239cacf0e92706da1cf6627591301238be34f50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/2fef73b01baff579c75d4013a44c8fbfb6030f25",
-                "reference": "2fef73b01baff579c75d4013a44c8fbfb6030f25",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/4239cacf0e92706da1cf6627591301238be34f50",
+                "reference": "4239cacf0e92706da1cf6627591301238be34f50",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.22"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.0.24"
             },
-            "time": "2023-10-07T00:33:13+00:00"
+            "time": "2023-10-08T03:08:01+00:00"
         },
         {
             "name": "dompdf/dompdf",

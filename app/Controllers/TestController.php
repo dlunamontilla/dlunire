@@ -13,6 +13,7 @@ final class TestController extends Controller {
      * @return string
      */
     public function index(): string {
+        // print_r($this->get_content());
 
         return view('welcome', [
             "button_type" => 'button--login',
