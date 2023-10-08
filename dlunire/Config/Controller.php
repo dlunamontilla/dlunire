@@ -111,39 +111,97 @@ abstract class Controller extends BaseController {
         return $this->http->get_email($field);
     }
 
+    /**
+     * Obtiene un UUID (Identificador Único Universal) para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener el UUID.
+     * @return string El UUID generado para el campo.
+     */
     public function get_uuid(string $field): string {
         return $this->http->get_uuid($field);
     }
 
+
+    /**
+     * Obtiene una contraseña válida para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener la contraseña.
+     * @return string La contraseña válida generada para el campo.
+     */
     public function get_password(string $field): string {
         return $this->http->get_password_valid($field);
     }
 
+
+    /**
+     * Obtiene un valor flotante para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener el valor flotante.
+     * @return float El valor flotante obtenido para el campo.
+     */
     public function get_float(string $field): float {
         return $this->http->get_float($field);
     }
 
+
+    /**
+     * Obtiene un valor entero para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener el valor entero.
+     * @return int El valor entero obtenido para el campo.
+     */
     public function get_integer(string $field): int {
         return $this->http->get_integer($field);
     }
 
+    /**
+     * Obtiene un valor numérico para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener el valor numérico.
+     * @return int|float El valor numérico obtenido para el campo, que puede ser un entero o un número de punto flotante.
+     */
     public function get_numeric(string $field): int|float {
         return $this->http->get_numeric($field);
     }
 
+    /**
+     * Obtiene una cadena de texto para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener la cadena de texto.
+     * @return string La cadena de texto obtenida para el campo.
+     */
     public function get_string(string $field): string {
         return $this->http->get_string($field);
     }
 
+    /**
+     * Obtiene una entrada de usuario para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener la entrada de usuario.
+     * @return string La entrada de usuario obtenida para el campo.
+     */
     public function get_input(string $field): string {
         return $this->http->get_input($field);
     }
 
+    /**
+     * Obtiene un valor requerido para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener el valor requerido.
+     * @return string El valor requerido obtenido para el campo.
+     */
     public function get_required(string $field): string {
         return $this->http->get_required($field);
     }
 
+    /**
+     * Obtiene un valor booleano para el campo especificado.
+     *
+     * @param string $field El nombre del campo para el que se desea obtener el valor booleano.
+     * @return string El valor booleano obtenido para el campo.
+     */
     public function get_boolean(string $field): string {
         return $this->http->get_boolean($field);
     }
+
 }
