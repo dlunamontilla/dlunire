@@ -77,10 +77,6 @@ class Authorizations implements AuthorizationsInterface {
          */
         $origin = $_SERVER['HTTP_ORIGIN'] ?? null;
 
-        if (!is_null($origin)) {
-            echo DLOutput::get_json($_SERVER, true);
-        }
-
         return $origin ?? '';
     }
 }
