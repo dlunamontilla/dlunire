@@ -36,7 +36,7 @@ class DLErrors {
             self::status($code) ? 'success': 'error' => $message
         ];
 
-        echo DLOutput::get_json($errors);
+        echo DLOutput::get_json($errors, true);
 
         exit;
     }
