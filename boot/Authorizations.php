@@ -16,7 +16,6 @@ class Authorizations implements AuthorizationsInterface {
     private static array $domains = [];
 
     public static function register_domain(array $domains): void {
-        print_r("Ciencia");
         static::$domains = $domains;
     }
 
