@@ -54,7 +54,7 @@ final class SystemCredentials {
         self::get_instance();
 
         ini_set('session.cookie_httponly', 1);
-        ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 30 * 6);
+        ini_set('session.gc_maxlifetime', 3600 * 24 * 30 * 6);
 
         session_start();
 
@@ -254,17 +254,19 @@ final class SystemCredentials {
         /**
          * Tiempo de vida definida en la variable de sesión
          * 
-         * @var integer $lifetime
+         * @var integer|null $lifetime
          */
-        $lifetime = 0;
+        $lifetime = null;
 
         if (isset(self::$credentials->DL_LIFETIME)) {
             $lifetime = (int) self::$credentials->DL_LIFETIME['value'] ?? 0;
         }
 
-        $lifetime = time() + $lifetime;
+        if (is_null($lifetime)) {
+            $lifetime = 3600;
+        }
 
-        return $lifetime;
+        return time() + $lifetime;
     }
 
     /**

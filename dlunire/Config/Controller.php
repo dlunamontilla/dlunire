@@ -3,6 +3,8 @@
 namespace Framework\Config;
 
 use DLRoute\Config\Controller as BaseController;
+use DLRoute\Server\DLServer;
+use Framework\Errors\DLErrors;
 use Framework\Requests\Request;
 
 /**
@@ -43,6 +45,7 @@ abstract class Controller extends BaseController {
     public function __construct() {
         parent::__construct();
         $this->http = Request::get_instance();
+        $this->send_csrf_token();
     }
 
     /**
@@ -50,7 +53,7 @@ abstract class Controller extends BaseController {
      *
      * @return string
      */
-    public function get_random_token(): string {
+    protected function get_random_token(): string {
         /**
          * Bytes aleatorio
          * 
@@ -73,7 +76,7 @@ abstract class Controller extends BaseController {
      *
      * @return string
      */
-    public function get_content(): string {
+    protected function get_content(): string {
         /**
          * Contenido de un cliente HTTP
          * 
@@ -89,7 +92,7 @@ abstract class Controller extends BaseController {
      *
      * @return array
      */
-    public function get_values(): array {
+    protected function get_values(): array {
         /**
          * Contenido de un cliente HTTP
          * 
@@ -107,7 +110,7 @@ abstract class Controller extends BaseController {
      * @param string $field
      * @return string
      */
-    public function get_email(string $field): string {
+    protected function get_email(string $field): string {
         return $this->http->get_email($field);
     }
 
@@ -117,7 +120,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener el UUID.
      * @return string El UUID generado para el campo.
      */
-    public function get_uuid(string $field): string {
+    protected function get_uuid(string $field): string {
         return $this->http->get_uuid($field);
     }
 
@@ -128,7 +131,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener la contraseña.
      * @return string La contraseña válida generada para el campo.
      */
-    public function get_password(string $field): string {
+    protected function get_password(string $field): string {
         return $this->http->get_password_valid($field);
     }
 
@@ -139,7 +142,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener el valor flotante.
      * @return float El valor flotante obtenido para el campo.
      */
-    public function get_float(string $field): float {
+    protected function get_float(string $field): float {
         return $this->http->get_float($field);
     }
 
@@ -150,7 +153,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener el valor entero.
      * @return int El valor entero obtenido para el campo.
      */
-    public function get_integer(string $field): int {
+    protected function get_integer(string $field): int {
         return $this->http->get_integer($field);
     }
 
@@ -158,9 +161,9 @@ abstract class Controller extends BaseController {
      * Obtiene un valor numérico para el campo especificado.
      *
      * @param string $field El nombre del campo para el que se desea obtener el valor numérico.
-     * @return int|float El valor numérico obtenido para el campo, que puede ser un entero o un número de punto flotante.
+     * @return float | int El valor numérico obtenido para el campo, que puede ser un entero o un número de punto flotante.
      */
-    public function get_numeric(string $field): int|float {
+    protected function get_numeric(string $field): float|int {
         return $this->http->get_numeric($field);
     }
 
@@ -170,7 +173,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener la cadena de texto.
      * @return string La cadena de texto obtenida para el campo.
      */
-    public function get_string(string $field): string {
+    protected function get_string(string $field): string {
         return $this->http->get_string($field);
     }
 
@@ -180,7 +183,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener la entrada de usuario.
      * @return string La entrada de usuario obtenida para el campo.
      */
-    public function get_input(string $field): string {
+    protected function get_input(string $field): string {
         return $this->http->get_input($field);
     }
 
@@ -190,7 +193,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener el valor requerido.
      * @return string El valor requerido obtenido para el campo.
      */
-    public function get_required(string $field): string {
+    protected function get_required(string $field): string {
         return $this->http->get_required($field);
     }
 
@@ -200,8 +203,69 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener el valor booleano.
      * @return string El valor booleano obtenido para el campo.
      */
-    public function get_boolean(string $field): string {
+    protected function get_boolean(string $field): string {
         return $this->http->get_boolean($field);
+    }
+
+    /**
+     * Método para enviar un token CSRF (Cross-Site Request Forgery) como encabezado HTTP.
+     * Este token se utiliza para proteger contra ataques de referencia cruzada.
+     *
+     * @return void
+     */
+    private function send_csrf_token(): void {
+        /**
+         * Token CSRF
+         *
+         * Este token se genera para proteger las solicitudes contra ataques de referencia cruzada.
+         *
+         * @var string $token
+         */
+        $token = $this->get_csrf_token();
+        setcookie('__csrf', $token, time() + 3600 * 24 * 6, "/", DLServer::get_hostname(), false, true);
+    }
+
+    /**
+     * Validar un token CSRF en una solicitud HTTP.
+     *
+     * Esta función verifica si el token CSRF enviado por el cliente coincide con el token CSRF
+     * almacenado en la sesión actual. Si no coinciden, se genera un mensaje de error y se
+     * devuelve una respuesta HTTP 403 Forbidden para indicar que la solicitud ha sido rechazada
+     * por razones de seguridad.
+     *
+     * @return void
+     */
+    protected function validate_csrf_token(): void {
+        /**
+         * Mensaje de error en caso de token CSRF inválido.
+         *
+         * @var string $error
+         */
+        $error = "Token CSRF inválido. La solicitud ha sido rechazada por motivos de seguridad.";
+
+        /**
+         * Token enviado por el cliente HTTP.
+         *
+         * @var string $client_token
+         */
+        $client_token = $_COOKIE['__csrf'] ?? null;
+
+        /**
+         * Token CSRF almacenado en la sesión actual.
+         *
+         * @var string $token
+         */
+        $token = $this->get_csrf_token();
+
+        if (is_null($client_token)) {
+            DLErrors::message($error, 403);
+        }
+
+        if ($token !== $client_token) {
+            DLErrors::message($error, 403);
+        }
+
+        $_SESSION['csrf_token'] = null;
     }
 
 }

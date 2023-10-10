@@ -72,7 +72,7 @@ class Project implements ProjectInterface {
 
     public static function run(): void {
         Authorizations::register_domain([
-            "localhost",
+            "localhost"
         ]);
 
         Authorizations::init();
