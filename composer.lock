@@ -83,16 +83,16 @@
         },
         {
             "name": "dlunamontilla/dlroute",
-            "version": "v1.3.12",
+            "version": "v1.3.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dlroute.git",
-                "reference": "6efe35bdcc3c8e7f1e3e847bf2a552865c5760cd"
+                "reference": "28346956d5d2db9282347c1696bca5f5a927f4d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dlroute/zipball/6efe35bdcc3c8e7f1e3e847bf2a552865c5760cd",
-                "reference": "6efe35bdcc3c8e7f1e3e847bf2a552865c5760cd",
+                "url": "https://api.github.com/repos/dlunamontilla/dlroute/zipball/28346956d5d2db9282347c1696bca5f5a927f4d5",
+                "reference": "28346956d5d2db9282347c1696bca5f5a927f4d5",
                 "shasum": ""
             },
             "type": "library",
@@ -114,22 +114,22 @@
             "description": "Sistema de enrutamiento para usar en DLUnire o cualquier otro proyecto.",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dlroute/issues",
-                "source": "https://github.com/dlunamontilla/dlroute/tree/v1.3.12"
+                "source": "https://github.com/dlunamontilla/dlroute/tree/v1.3.14"
             },
-            "time": "2023-10-11T14:17:14+00:00"
+            "time": "2023-11-03T08:41:47+00:00"
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.1.5",
+            "version": "v0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "8017d2a11992a3ccfed21a57b6b0bfe9fd7d5180"
+                "reference": "03c6897bc9984bed1bce1519a7519f06416b7b4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/8017d2a11992a3ccfed21a57b6b0bfe9fd7d5180",
-                "reference": "8017d2a11992a3ccfed21a57b6b0bfe9fd7d5180",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/03c6897bc9984bed1bce1519a7519f06416b7b4f",
+                "reference": "03c6897bc9984bed1bce1519a7519f06416b7b4f",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.5"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.9"
             },
-            "time": "2023-10-11T14:53:16+00:00"
+            "time": "2023-11-01T07:50:10+00:00"
         },
         {
             "name": "dompdf/dompdf",
@@ -719,16 +719,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.2",
+            "version": "v4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "cead6637226456b35e1175cc53797dd585d85545"
+                "reference": "a9d127dd6a203ce6d255b2e2db49759f7506e015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/cead6637226456b35e1175cc53797dd585d85545",
-                "reference": "cead6637226456b35e1175cc53797dd585d85545",
+                "url": "https://api.github.com/repos/nette/utils/zipball/a9d127dd6a203ce6d255b2e2db49759f7506e015",
+                "reference": "a9d127dd6a203ce6d255b2e2db49759f7506e015",
                 "shasum": ""
             },
             "require": {
@@ -799,9 +799,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.2"
+                "source": "https://github.com/nette/utils/tree/v4.0.3"
             },
-            "time": "2023-09-19T11:58:07+00:00"
+            "time": "2023-10-29T21:02:13+00:00"
         },
         {
             "name": "phenx/php-font-lib",
@@ -1777,16 +1777,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.4.1",
+            "version": "10.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "62bd7af13d282deeb95650077d28ba3600ca321c"
+                "reference": "cacd8b9dd224efa8eb28beb69004126c7ca1a1a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/62bd7af13d282deeb95650077d28ba3600ca321c",
-                "reference": "62bd7af13d282deeb95650077d28ba3600ca321c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/cacd8b9dd224efa8eb28beb69004126c7ca1a1a1",
+                "reference": "cacd8b9dd224efa8eb28beb69004126c7ca1a1a1",
                 "shasum": ""
             },
             "require": {
@@ -1858,7 +1858,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.4.1"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.4.2"
             },
             "funding": [
                 {
@@ -1874,7 +1874,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-08T05:01:11+00:00"
+            "time": "2023-10-26T07:21:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",

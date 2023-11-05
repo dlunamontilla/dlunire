@@ -4,7 +4,7 @@ use DLRoute\Routes\ResourceManager;
 use DLRoute\Routes\RouteDebugger;
 use DLRoute\Server\DLServer;
 
-if (!function_exists('route')) {
+if (!function_exists('asset')) {
 
     /**
      * Devuelve la ruta HTTP de un recurso.
@@ -13,6 +13,7 @@ if (!function_exists('route')) {
      * @return string
      */
     function asset(string $uri): string {
+
         $uri = "public/{$uri}";
 
         /**
@@ -37,29 +38,24 @@ if (!function_exists('route')) {
      * @return string
      */
     function route(string $uri, bool $extension = false) {
-
+        
         if (!$extension) {
             $uri = RouteDebugger::dot_to_slash($uri);
         }
 
-        $uri = RouteDebugger::trim_slash($uri);
-        $uri = RouteDebugger::clear_route($uri);
+        $uri = trim($uri);
+        $uri = ltrim($uri, "\/");
 
         /**
-         * Ruta HTTP base de ejecución de la aplicación
+         * URL Base de la aplicación
          * 
-         * @var string
+         * @var string $url
          */
-        $host = DLServer::get_base_url();
-
-        /**
-         * URL real del recurso o ruta.
-         * 
-         * @var string
-         */
-        $url = "{$host}/{$uri}";
-        $url = RouteDebugger::url_encode($url);
-
+        $url = DLServer::get_base_url();
+        
+        $url = rtrim($url, "\/");
+        $url = "{$url}/{$uri}";
+        
         return trim($url);
     }
 }
