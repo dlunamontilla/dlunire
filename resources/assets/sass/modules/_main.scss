@@ -37,9 +37,10 @@ label {
 }
 
 .header {
-    background-color: rgba(darken($base-color, 37), 0.8);
+    background-color: rgb(18 24 28);
+    color: white;
     margin-bottom: 40px;
-    border-bottom: 1px solid rgba(white, 0.1);
+    border-bottom: 3px solid darken(#08d, 10);
 
     position: fixed;
     margin: auto;
@@ -58,6 +59,13 @@ label {
     margin: 0 auto;
 
     max-width: $max-width;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    --icon-size: 60px;
+
+    --icon-width: var(--icon-size);
+    --icon-height: var(--icon-size);
 
     &__logo {
         display: flex;
@@ -73,6 +81,9 @@ label {
             position: relative;
             max-width: 70px;
             margin-right: 10px;
+
+            width: var(--icon-size);
+            height: var(--icon-size);
         }
 
         @media screen and (max-width: 800px) {
@@ -84,4 +95,18 @@ label {
 main {
     padding-bottom: 100px;
     padding-top: 100px;
+}
+
+.markdown {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &:not(:first-child) {
+            margin-top: 50px;
+        }
+    }
 }
