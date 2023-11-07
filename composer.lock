@@ -120,16 +120,16 @@
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.1.9",
+            "version": "v0.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "03c6897bc9984bed1bce1519a7519f06416b7b4f"
+                "reference": "818436768eca51868e39164c989f01bff64716f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/03c6897bc9984bed1bce1519a7519f06416b7b4f",
-                "reference": "03c6897bc9984bed1bce1519a7519f06416b7b4f",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/818436768eca51868e39164c989f01bff64716f3",
+                "reference": "818436768eca51868e39164c989f01bff64716f3",
                 "shasum": ""
             },
             "require": {
@@ -141,7 +141,7 @@
                 "phpmailer/phpmailer": "^6.8"
             },
             "require-dev": {
-                "phpunit/phpunit": "^10.3"
+                "phpunit/phpunit": "^10.4"
             },
             "bin": [
                 "bin/connect-database"
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.9"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.10"
             },
-            "time": "2023-11-01T07:50:10+00:00"
+            "time": "2023-11-07T02:28:36+00:00"
         },
         {
             "name": "dompdf/dompdf",
