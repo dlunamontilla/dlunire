@@ -83,16 +83,16 @@
         },
         {
             "name": "dlunamontilla/dlroute",
-            "version": "v1.3.18",
+            "version": "v1.3.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dlroute.git",
-                "reference": "72ca78dc68d6cdf3db210f038dcf2e27dfe71a4a"
+                "reference": "e0329693ac746ebe0c56275c91e51243aeadb170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dlroute/zipball/72ca78dc68d6cdf3db210f038dcf2e27dfe71a4a",
-                "reference": "72ca78dc68d6cdf3db210f038dcf2e27dfe71a4a",
+                "url": "https://api.github.com/repos/dlunamontilla/dlroute/zipball/e0329693ac746ebe0c56275c91e51243aeadb170",
+                "reference": "e0329693ac746ebe0c56275c91e51243aeadb170",
                 "shasum": ""
             },
             "type": "library",
@@ -114,22 +114,22 @@
             "description": "Sistema de enrutamiento para usar en DLUnire o cualquier otro proyecto.",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dlroute/issues",
-                "source": "https://github.com/dlunamontilla/dlroute/tree/v1.3.18"
+                "source": "https://github.com/dlunamontilla/dlroute/tree/v1.3.19"
             },
-            "time": "2023-11-13T07:04:20+00:00"
+            "time": "2023-11-16T01:42:18+00:00"
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.1.13",
+            "version": "v0.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "3982b9dbb97da0dd6cfd01ec6836a9c1868248bd"
+                "reference": "1f07231150625fddc3243cecd7fd9d322ecaacc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/3982b9dbb97da0dd6cfd01ec6836a9c1868248bd",
-                "reference": "3982b9dbb97da0dd6cfd01ec6836a9c1868248bd",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/1f07231150625fddc3243cecd7fd9d322ecaacc3",
+                "reference": "1f07231150625fddc3243cecd7fd9d322ecaacc3",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.13"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.14"
             },
-            "time": "2023-11-13T07:06:31+00:00"
+            "time": "2023-11-16T01:51:55+00:00"
         },
         {
             "name": "dompdf/dompdf",
@@ -1078,7 +1078,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -1125,7 +1125,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
