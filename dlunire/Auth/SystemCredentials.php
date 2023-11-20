@@ -54,8 +54,7 @@ final class SystemCredentials {
         self::get_instance();
 
         ini_set('session.cookie_httponly', 1);
-        ini_set('session.gc_maxlifetime', 3600 * 24 * 30 * 6);
-
+        session_set_cookie_params(3600 * 24 * 30 * 6);
         session_start();
 
         self::validate_time();
@@ -206,15 +205,95 @@ final class SystemCredentials {
 
         if (is_null($token)) {
             $_SESSION['auth'] = null;
-            // return;
+            return;
         }
 
-        if ($token !== $auth->get_session_value('__auth__')) {
+        if (!hash_equals($token, $auth->get_session_value('__auth__'))) {
             $_SESSION['auth'] = null;
             return;
-
         }
 
+        static::update_token_session();
+    }
+
+    /**
+     * Actualiza los tokens de la sesión
+     *
+     * @return void
+     */
+    private static function update_token_session(): void {
+        /**
+         * Nuevo token de sesión generado.
+         * 
+         * @var string $new_token
+         */
+        $new_token = static::generate_unique_token();
+
+        if (self::is_token_update_required() || is_null($_SESSION['__auth__'])) {
+            setcookie(
+                '__auth__',
+                $new_token,
+                time() + 60 * 60 * 24 * 30 * 6,
+                "/",
+                DLServer::get_hostname(),
+                self::$is_production,
+                true
+            );
+
+            $_SESSION['__auth__'] = $new_token;
+            
+            header("DLUnire: {$new_token}");
+            header("Framework: DLUnire");
+        }
+        
+    }
+
+    /**
+     * Devuelve la fecha y hora actual del sistema en formato UNIX + 60 segundos o tiempo restante adicional.
+     *
+     * @return integer
+     */
+    private static function get_time(): int {
+
+        /**
+         * @var integer|null $time
+         */
+        $time = $_SESSION['token-time'] ?? null;
+
+        if (is_null($time)) {
+            $time = time() + 60;
+            $_SESSION['token-time'] = $time;
+        }
+
+        return $time;
+    }
+
+    /**
+     * Indica si la actualización del token es requerida tras alcanzar el tiempo de expiración.
+     *
+     * @return boolean
+     */
+    private static function is_token_update_required(): bool {
+        /**
+         * Fecha y hora actual del sistema + 60 segundos o tiempo restante.
+         * 
+         * @var integer $time
+         */
+        $time = self::get_time() - time();
+
+        if ($time < 0) {
+            $_SESSION['token-time'] = time() + 60;
+        }
+
+        return $time < 0;
+    }
+
+    /**
+     * Devuelve un único token aleatorio
+     *
+     * @return string
+     */
+    private static function generate_unique_token(): string {
         /**
          * Bytes aleatorios
          * 
@@ -229,20 +308,7 @@ final class SystemCredentials {
          */
         $new_token = bin2hex($bytes);
 
-        setcookie(
-            '__auth__',
-            $new_token,
-            time() + 60 * 60 * 24 * 30 * 6,
-            "/",
-            DLServer::get_hostname(),
-            self::$is_production,
-            true
-        );
-
-        $_SESSION['__auth__'] = $new_token;
-        
-        header("DLUnire: {$new_token}");
-        header("Framework: DLUnire");
+        return $new_token;
     }
 
     /**
