@@ -4,6 +4,7 @@ namespace Framework\Config;
 
 use DLRoute\Config\Controller as BaseController;
 use DLRoute\Server\DLServer;
+use DLUnire\Auth\Auth;
 use Framework\Errors\DLErrors;
 use Framework\Requests\Request;
 
@@ -183,7 +184,7 @@ abstract class Controller extends BaseController {
      * @param string $field El nombre del campo para el que se desea obtener la entrada de usuario.
      * @return string La entrada de usuario obtenida para el campo.
      */
-    protected function get_input(string $field): string {
+    protected function get_input(string $field): string|null {
         return $this->http->get_input($field);
     }
 
@@ -267,5 +268,4 @@ abstract class Controller extends BaseController {
 
         $_SESSION['csrf_token'] = null;
     }
-
 }
