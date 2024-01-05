@@ -18,7 +18,7 @@
 >
 > Vaya al instalador de extensiones de **Visual Studio Code** y busque `DL Typed Environment` y si no aparece, [visite este enlace para descargar la extensión](https://marketplace.visualstudio.com/items?itemName=dlunamontilla.envtype "Resaltador de sintaxis").
 >
-> ### Instalación de SASS
+> ## Instalación de SASS
 >
 > Para escribir código `SCSS` debe instalar SASS escribiendo el siguiente comando:
 >
@@ -149,9 +149,12 @@ use Framework\Config\Controller;
 
 final class TestController extends Controller {
 
-    public function method(object $param): string {
+    public function method(object $params): string {
 
-        return view('vista');
+        return view('vista', [
+            "variable1" => "Valor de la variable 1",
+            "variable2" => "Valor de la variable 2"
+        ]);
     }
 }
 ```
@@ -166,9 +169,9 @@ Los parámetros definidos en `$param` son los que se han definido en una ruta si
 /ruta/{param1}/{param2}{paramN}
 
 # Estos parámetros se convierten a esto de forma automática:
-$param->param1
-$param->param2
-$param->paramN
+$param->param1;
+$param->param2;
+$param->paramN;
 ```
 
 ## Captura de valores desde el controlador
@@ -198,7 +201,7 @@ El contenido de `$values` es un array asociativo, donde la clave es el nombre de
 
 ## Validación de entradas del usuario
 
-Si quiere evaluar si la entrada del usuario es un correo electrónico, una cadena `UUID` u otro formato, puede escribir las siguientes líneas:
+Si quiere recibir una entrada de usuario, como por ejemplo, un correo electrónico, una cadena `UUID` u otro formato, puede escribir las siguientes líneas:
 
 ```php
 namespace DLUnire\Controllers;
@@ -207,36 +210,25 @@ use Framework\Config\Controller;
 final class TestController extends Controller {
 
     public function method(object $param): string {
-        /*
-         * Valores de la petición
-         *
-         * @var array $values
-         */
-        $values = $this->get_values();
 
         /**
          * Correo electrónico
          * 
          * @var string|null $email
          */
-        $email = $values['email'] ?? null;
-
-        if ($this->request->is_email($email)) {
-            # Lógica a ejecutar si es o no un email
-        }
+        $email = $this->get_email('email');
 
         /**
          * Identificador único universal
          * 
          * @var string |null $uuid
          */
-        $uuid = $values['uuid'] ?? null;
+        $uuid = $this->get_uuid('uuid');
 
-        if ($this->request->is_uuid($uuid)) {
-            # Lógica a ejecutar si es o no un UUID
-        }
-
-        return view('vista');
+        return view('vista', [
+            "email" => $email,
+            "uuid" => $uuid
+        ]);
     }
 }
 ```
@@ -250,7 +242,7 @@ namespace DLUnire\Models;
 
 use DLTools\Database\Model;
 
-class Tabla extends Models {}
+final class Tabla extends Model {}
 ```
 
 No hace falta definir algo más, a menos que desee agregar funcionalidades personalizadas.
@@ -264,8 +256,8 @@ namespace DLUnire\Models;
 
 use DLTools\Database\Model;
 
-class Tabla extends Models {
-    protecte static ?string $table = "otra_tabla";
+final class Tabla extends Model {
+    protected static ?string $table = "otra_tabla";
 }
 ```
 
@@ -282,21 +274,18 @@ namespace DLUnire\Models;
 
 use DLTools\Database\Model;
 
-class Users extends Models {}
+class Users extends Model {}
 ```
 
 Y luego, consulta la lista de usuarios de esta forma:
 
 ```php
-new Users();
 $users = Users::get();
 ```
 
 También, puede consultar la lista de usuarios con paginación incluida de esta forma:
 
 ```php
-new Users();
-
 /**
  * Número de páginas
  * 
