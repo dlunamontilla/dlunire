@@ -22,8 +22,8 @@
         "optimize-autoloader": true
     },
     "require": {
-        "dompdf/dompdf": "^2.0",
-        "dlunamontilla/dltools": "^0.1"
+        "dlunamontilla/dltools": "^0.1",
+        "dompdf/dompdf": "^2.0"
     },
 
     "scripts": {
