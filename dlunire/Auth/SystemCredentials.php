@@ -6,6 +6,17 @@ use DLRoute\Server\DLServer;
 use DLTools\Config\Credentials;
 use DLTools\Config\DLConfig;
 
+
+/**
+ * Valida las credenciales del usuario autenticado
+ * 
+ * @package Framework\Auth
+ * 
+ * @version 1.0.0 (release)
+ * @author David E Luna M <contact@dlunire.pro>
+ * @copyright 2024 David E Luna M
+ * @license MIT
+ */
 final class SystemCredentials {
 
     use DLConfig;
