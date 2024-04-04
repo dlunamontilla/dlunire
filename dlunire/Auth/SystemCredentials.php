@@ -18,7 +18,6 @@ use DLTools\Config\DLConfig;
  * @license MIT
  */
 final class SystemCredentials {
-
     use DLConfig;
 
     /**
@@ -400,7 +399,8 @@ final class SystemCredentials {
             return;
         }
 
-        $auth = null;
+        $auth = '';
+
         setcookie('__auth__', null, time() - 60 * 60 * 30);
     }
 
