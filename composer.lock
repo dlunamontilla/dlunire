@@ -83,16 +83,16 @@
         },
         {
             "name": "dlunamontilla/dlroute",
-            "version": "v1.3.34",
+            "version": "v1.3.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dlroute.git",
-                "reference": "21b387c7e0740eb96df662c2fe32033e8d305ecc"
+                "reference": "9bc62e00f595c2720a3472579daf572423d634a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dlroute/zipball/21b387c7e0740eb96df662c2fe32033e8d305ecc",
-                "reference": "21b387c7e0740eb96df662c2fe32033e8d305ecc",
+                "url": "https://api.github.com/repos/dlunamontilla/dlroute/zipball/9bc62e00f595c2720a3472579daf572423d634a6",
+                "reference": "9bc62e00f595c2720a3472579daf572423d634a6",
                 "shasum": ""
             },
             "require": {
@@ -117,22 +117,22 @@
             "description": "Sistema de enrutamiento para usar en DLUnire o cualquier otro proyecto.",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dlroute/issues",
-                "source": "https://github.com/dlunamontilla/dlroute/tree/v1.3.34"
+                "source": "https://github.com/dlunamontilla/dlroute/tree/v1.3.35"
             },
-            "time": "2024-04-21T00:52:32+00:00"
+            "time": "2024-04-21T07:27:55+00:00"
         },
         {
             "name": "dlunamontilla/dltools",
-            "version": "v0.1.48",
+            "version": "v0.1.49",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dlunamontilla/dltools.git",
-                "reference": "97c37d4a6d22cdc204beb3b0e0af288a1f5cdf32"
+                "reference": "00453a2b06049d1fc9a79ca2b1f5502d7de6d263"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/97c37d4a6d22cdc204beb3b0e0af288a1f5cdf32",
-                "reference": "97c37d4a6d22cdc204beb3b0e0af288a1f5cdf32",
+                "url": "https://api.github.com/repos/dlunamontilla/dltools/zipball/00453a2b06049d1fc9a79ca2b1f5502d7de6d263",
+                "reference": "00453a2b06049d1fc9a79ca2b1f5502d7de6d263",
                 "shasum": ""
             },
             "require": {
@@ -174,9 +174,9 @@
             "homepage": "https://aprendiendo.netlify.app/",
             "support": {
                 "issues": "https://github.com/dlunamontilla/dltools/issues",
-                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.48"
+                "source": "https://github.com/dlunamontilla/dltools/tree/v0.1.49"
             },
-            "time": "2024-04-21T01:01:03+00:00"
+            "time": "2024-04-21T07:32:45+00:00"
         },
         {
             "name": "dompdf/dompdf",
