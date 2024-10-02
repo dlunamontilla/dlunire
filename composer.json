@@ -22,7 +22,7 @@
         "optimize-autoloader": true
     },
     "require": {
-        "dompdf/dompdf": "^2.0",
+        "dompdf/dompdf": "^3.0",
         "dlunamontilla/dltools": "^0.1.25"
     },
 
