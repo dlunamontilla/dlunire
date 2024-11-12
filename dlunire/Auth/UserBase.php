@@ -1,7 +1,12 @@
 <?php
+
 namespace Framework\Auth;
 
+use DLRoute\Server\DLHost;
+use DLRoute\Server\DLServer;
 use DLTools\Auth\DLAuth;
+use DLTools\Auth\DLAuthOptions;
+use DLTools\Auth\DLCookie;
 use DLTools\Auth\DLUser;
 use Error;
 
@@ -51,7 +56,7 @@ abstract class UserBase extends DLUser {
      * @throws Error
      */
     public function capture_credentials(): bool {
-        
+
         /**
          * Autenticación del usuario
          * 
@@ -71,7 +76,7 @@ abstract class UserBase extends DLUser {
         if ($username < 4) {
             throw new Error("El nombre de usuario debe contar, con al menos, 4 caracteres");
         }
-        
+
         $this->set_username(
             $username
         );
@@ -89,16 +94,23 @@ abstract class UserBase extends DLUser {
             $password
         );
 
+        /** @var DLCookie $cookie */
+        $cookie = new DLCookie();
+        $cookie->set_domain(DLServer::get_hostname());
+        $cookie->set_http_only(true);
+        $cookie->set_secure(DLHost::is_https());
+
+        $auth_options = new DLAuthOptions();
+        $auth_options->set_username_field('username');
+        $auth_options->set_password_field('password');
+        $auth_options->set_token_field('token');
+
         /**
          * Indica si se ha loggeado el usuario
          * 
          * @var boolean $logged
          */
-        $logged = $auth->auth($this, [
-            "username_field" => static::$username_column ?? 'username',
-            "password_field" => static::$password_column ?? 'password',
-            "token_field" => static::$token_column ?? 'token'
-        ]);
+        $logged = $auth->auth($this, $auth_options, $cookie);
 
         return $logged;
     }
